@@ -1,0 +1,20 @@
+Permision
+	Superadmin : 
+	- CRUD Product
+	- CRUD User
+	- CRUD User Permision
+	- CRUD Brand
+	- CRUD Product category
+	- CRUD Message
+	- CRUD Promo
+	
+
+	User/Supplier:
+	- CRUD Product
+	- CRUD User Profile
+	- CRUD Message
+	
+	Guest:
+	- View Product
+
+	
