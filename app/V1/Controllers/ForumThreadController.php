@@ -48,7 +48,8 @@ class ForumThreadController extends BaseController
 
       $forum = Forum::find($idForum);
       $thread = ForumThread::find($idThread);
-      $post = Post::join('users', 'post.user_id','=','users.id')->where('thread_id',$thread->id)->get();
+      $post = Post::join('users', 'post.user_id','=','users.id')
+      ->select('post.id','post.thread_id','post.post','post.user_id','users.email')->where('thread_id',$thread->id)->orderBy('post.id','desc')->get();
       return response($post);
 
     }
